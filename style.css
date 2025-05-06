@@ -1,0 +1,155 @@
+/** Importation des polices d'écriture */
+
+@font-face {
+    font-family: "Kanit-extra-bold";
+    src: url("./fonts/Kanit-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "Kanit-extra-light";
+    src: url(./fonts/Kanit-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: "Martian-mono-extra-light";
+    src: url(./fonts/MartianMono-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: "Martian-Mono-Semi-Expanded-Medium";
+    src: url(./fonts/MartianMono_SemiExpanded-Medium.ttf);
+}
+
+/** === GESTION DES BALISES COMMUNES === */
+
+html{
+    font-size: 13px;
+}
+
+/** Propriétés body
+*** Réinitialise la proprité margin à 0
+*** Définit la couleur de fond du document et applique un gradient
+*** Empêche la répétition du fond et fixe ce dernier
+*** Définit la taille de police initiale
+*/
+
+body {
+    margin: 0;
+    background: #7F6AFA;
+    background: linear-gradient(0deg, rgba(127, 106, 250, 1) 0%, rgba(105, 130, 250, 1) 50%, rgba(105, 176, 250, 1) 100%);
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    font-size: 20px;
+
+}
+
+footer {
+
+}
+
+/** Proprités title-name 
+*** Modifie la marge de l'élément
+*** Aligne le texte au centre du conteneur, définit la taille de la police 
+*** Met les caractères en majuscule 
+*** Modifie la position de l'élément 
+*/
+
+#title-name{
+    margin: 0.5rem;
+
+    text-align: center;
+    font-family: "Kanit-extra-bold";
+    font-size: 4.5rem;
+    text-transform: uppercase;
+
+    position: absolute;
+    top: 5.5%;
+    left: 25%;
+    right: 25%;
+
+    border-bottom: 5px solid #6982FA;
+}
+
+#avatar{
+    width: 200px;
+    height: auto;
+    clip-path: circle(38%);
+
+    position: absolute;
+    z-index: auto;
+    top: 0%;
+    right: 10%;
+    left: 75%;
+
+}
+
+.nav-list{
+    min-width: 5%;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+
+    overflow: scroll;
+
+    font-family: "Martian-Mono-Semi-Expanded-Medium";
+
+    padding: 2rem;
+}
+
+.nav-list-title{
+    margin: 0;
+    padding: 2rem;
+    border-bottom: 5px solid #5E6FFA;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#nav-motivation{
+    max-width: 25%;
+    min-width: 5%;
+    width: auto;
+
+    position: absolute;
+    left: 3%;
+    top: 25%;
+}
+
+#list-motivation{
+    text-align: justify;
+    font-size: 1.5rem;
+}
+
+#list-motivation li{
+    padding: 1rem;
+}
+
+#nav-social{
+    position: absolute;
+    left: 60%;
+    top: 25%;
+
+    width: auto;
+    height: auto;
+}
+
+#list-social{
+    display: flex;
+    flex-direction: row;
+
+    text-align: justify;
+    text-overflow: "-"
+}   
+
+#list-social li{
+    font-size: 1rem;
+    margin: 2rem;
+}
+
+#footer-note{
+    font-family: "Martian-Mono-Semi-Expanded-Medium";
+    font-size: 0.75rem;
+
+    position: fixed;
+    left : 45%;
+    top: 95%
+}
