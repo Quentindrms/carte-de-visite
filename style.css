@@ -22,7 +22,7 @@
 
 /** === GESTION DES BALISES COMMUNES === */
 
-html{
+html {
     font-size: 13px;
 }
 
@@ -37,15 +37,13 @@ body {
     margin: 0;
     background: #7F6AFA;
     background: linear-gradient(0deg, rgba(127, 106, 250, 1) 0%, rgba(105, 130, 250, 1) 50%, rgba(105, 176, 250, 1) 100%);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     font-size: 20px;
 
 }
 
-footer {
-
-}
+footer {}
 
 /** Proprités title-name 
 *** Modifie la marge de l'élément
@@ -54,7 +52,7 @@ footer {
 *** Modifie la position de l'élément 
 */
 
-#title-name{
+#title-name {
     margin: 0.5rem;
 
     text-align: center;
@@ -70,7 +68,7 @@ footer {
     border-bottom: 5px solid #6982FA;
 }
 
-#avatar{
+#avatar {
     width: 200px;
     height: auto;
     clip-path: circle(38%);
@@ -83,73 +81,126 @@ footer {
 
 }
 
-.nav-list{
+.nav-list {
     min-width: 5%;
     width: auto;
     height: auto;
-    border: 1px solid black;
+    border: 3px solid #5E6FFA;
+    border-radius: 5px;
 
     overflow: scroll;
 
     font-family: "Martian-Mono-Semi-Expanded-Medium";
 
     padding: 2rem;
+
+    .nav-list-title {
+        margin: 0;
+        padding: 2rem;
+
+        border-bottom: 5px solid #5E6FFA;
+
+        text-align: center;
+        font-size: 2.5rem;
+    }
 }
 
-.nav-list-title{
-    margin: 0;
-    padding: 2rem;
-    border-bottom: 5px solid #5E6FFA;
-    text-align: center;
-    font-size: 2.5rem;
-}
-
-#nav-motivation{
-    max-width: 25%;
+#nav-motivation {
+    max-width: 45%;
     min-width: 5%;
     width: auto;
 
     position: absolute;
     left: 3%;
     top: 25%;
+
+    #list-motivation {
+        text-align: justify;
+        font-size: 1.5rem;
+    }
+
+    #list-motivation li {
+        padding: 1rem;
+        display: flex;
+    }
 }
 
-#list-motivation{
-    text-align: justify;
-    font-size: 1.5rem;
-}
 
-#list-motivation li{
-    padding: 1rem;
-}
-
-#nav-social{
+#nav-social {
     position: absolute;
-    left: 60%;
+    left: 54%;
     top: 25%;
 
     width: auto;
     height: auto;
+
+    #list-social {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        text-align: justify;
+        text-overflow: "-";
+    }
+
+    #list-social li {
+        border: 2px solid #5C4CB5;
+        border-radius: 10px;
+        margin: 0.45rem;
+        padding: .45rem;
+        list-style-type: none;
+    }
+
+
+    li:hover {
+        background-color: #5E6FFA;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    img {
+        font-size: 1rem;
+        margin-right: 1rem;
+
+        padding-left: 0.75rem;
+
+        width: 15px;
+        height: auto;
+    }
+
 }
 
-#list-social{
-    display: flex;
-    flex-direction: row;
 
-    text-align: justify;
-    text-overflow: "-"
-}   
+#nav-cv {
+    width: 25%;
+    height: 15%;
 
-#list-social li{
-    font-size: 1rem;
-    margin: 2rem;
+    position: absolute;
+    left: 54%;
+    top: 60%;
+
+    a {
+        text-decoration: none;
+    }
+
+    #cv-title{
+        border: none;
+        padding: 3rem;
+        color: black;
+    }
 }
 
-#footer-note{
+#nav-cv:hover{
+    background-color: #5C4CB5;
+}
+
+#footer-note {
     font-family: "Martian-Mono-Semi-Expanded-Medium";
     font-size: 0.75rem;
 
     position: fixed;
-    left : 45%;
+    left: 45%;
     top: 95%
 }
