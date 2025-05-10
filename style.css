@@ -40,9 +40,38 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-size: 20px;
+    
+    max-content: 100%;
+    overflow-x: hidden;
+}
 
-    display: block;
-    display: inline;
+/** Création d'une flexbox dans le header
+Disposition en ligne
+Aligne les éléments sur l'axe secondaire (horizontal)
+*/
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/** Création d'une section main contenant le coeur de la page 
+Disposition en grille
+Création d'une grille suivant le modèle 4 colonnes / 4 lignes
+*/
+
+#main{
+    display: grid;
+    
+    width: fit-content;
+
+    grid-template: 
+    "MOTIV MOTIV  SOCIAL SOCIAL" auto
+    "MOTIV MOTIV  SOCIAL SOCIAL" auto
+    "MOTIV MOTIV  CV ." auto;
 }
 
 /** Proprités title-name 
@@ -60,12 +89,9 @@ body {
     font-size: 4.5rem;
     text-transform: uppercase;
 
-    position: absolute;
-    top: 5.5%;
-    left: 25%;
-    right: 25%;
-
     border-bottom: 5px solid #6982FA;
+
+
 }
 
 /** Utilisation de clip-path pour ne pas afficher la partie de l'image en dehors du cercle
@@ -77,15 +103,11 @@ redimensionnement de l'image et positionnement sur le côté droit du titre
     height: auto;
     clip-path: circle(38%);
 
-    position: absolute;
-    top: 0%;
-    right: 10%;
-    left: 75%;
 
 }
 
 /** Conteneur commun contenant les deux listes motivations et social
-Définit une largeur minimum de 5% par rapport à l'élément body 
+Définit une largeur minimum de 5% par rapport à l'élément main 
 Largeur maximale définit automatiquement
 **/
 
@@ -120,13 +142,13 @@ Définit une largeur minimale et maximale
 Positionnement du conteneur **/
 
 #nav-motivation {
-    max-width: 45%;
-    min-width: 5%;
+    max-width: 70%;
+    min-width: 20%;
     width: auto;
 
-    position: absolute;
-    left: 3%;
-    top: 25%;
+    margin-left: 5%;
+
+    grid-area: MOTIV;
 }
 
 #list-motivation {
@@ -146,12 +168,13 @@ Positionnement du conteneur **/
 /** Définit le positionnement du conteneur **/
 
 #nav-social {
-    position: absolute;
-    left: 54%;
-    top: 25%;
+    width: fit-content;
+    height: fit-content;
 
-    width: auto;
-    height: auto;
+    min-width: 20%;
+    max-width: 80%;
+
+    grid-area: SOCIAL;
 }
 
 /** Création d'une flexbox pour aligner les éléments de la liste en ligne
@@ -160,7 +183,7 @@ Empêche le retour à la ligne **/
 #list-social {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
     text-align: justify;
 }
@@ -211,12 +234,13 @@ img {
 */
 
 #nav-cv {
-    width: 25%;
-    height: 15%;
+    width: 60%;
+    height: 50%;
 
-    position: absolute;
-    left: 54%;
-    top: 60%;
+    margin-top: 5%;
+    margin-left: 5%;
+
+    grid-area: CV;
 
     transition-property: background-color, border-color;
     transition-duration: 0.35s;
@@ -246,7 +270,7 @@ img {
     font-family: "Martian-Mono-Semi-Expanded-Medium";
     font-size: 0.75rem;
 
-    position: fixed;
+    position: relative;
     left: 45%;
     top: 95%
 }
