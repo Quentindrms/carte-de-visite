@@ -23,7 +23,7 @@
 /** === GESTION DES BALISES COMMUNES === */
 
 html {
-    font-size: 13px;
+    font-size: 1vw;
 }
 
 /** Propriétés body
@@ -39,9 +39,9 @@ body {
     background: linear-gradient(0deg, rgba(127, 106, 250, 1) 0%, rgba(105, 130, 250, 1) 50%, rgba(105, 176, 250, 1) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-size: 20px;
+    font-size: 1vw;
+
     
-    max-content: 100%;
     overflow-x: hidden;
 }
 
@@ -65,13 +65,13 @@ Création d'une grille suivant le modèle 4 colonnes / 4 lignes
 
 #main{
     display: grid;
-    
     width: fit-content;
 
+    grid-template-columns: repeat(4, 1fr);
     grid-template: 
-    "MOTIV MOTIV  SOCIAL SOCIAL" auto
-    "MOTIV MOTIV  SOCIAL SOCIAL" auto
-    "MOTIV MOTIV  CV ." auto;
+    "MOTIV MOTIV  SOCIAL SOCIAL"
+    "MOTIV MOTIV  CV CV"
+    "MOTIV MOTIV  . .";
 }
 
 /** Proprités title-name 
@@ -90,8 +90,6 @@ Création d'une grille suivant le modèle 4 colonnes / 4 lignes
     text-transform: uppercase;
 
     border-bottom: 5px solid #6982FA;
-
-
 }
 
 /** Utilisation de clip-path pour ne pas afficher la partie de l'image en dehors du cercle
@@ -102,8 +100,6 @@ redimensionnement de l'image et positionnement sur le côté droit du titre
     width: 200px;
     height: auto;
     clip-path: circle(38%);
-
-
 }
 
 /** Conteneur commun contenant les deux listes motivations et social
@@ -132,7 +128,7 @@ Largeur maximale définit automatiquement
     border-bottom: 5px solid #5E6FFA;
 
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2vw;
 }
 
 /** === Propriétés propres à la partie motivations  === **/
@@ -152,15 +148,16 @@ Positionnement du conteneur **/
 }
 
 #list-motivation {
-    text-align: justify;
-    font-size: 1.5rem;
+    font-size: 1.15vw;
+    text-wrap: wrap;
 }
 
 /** Ajout d'un padding pour centrer les éléments dans le conteneur **/
 
 #list-motivation li {
     padding: 1rem;
-    list-style: none;
+    list-style-type: none;
+    list-style-type: square;
 }
 
 /** === Propriétés propres à partie social === **/
@@ -234,11 +231,20 @@ img {
 */
 
 #nav-cv {
-    width: 60%;
-    height: 50%;
 
-    margin-top: 5%;
-    margin-left: 5%;
+    margin-top: 1vw;
+
+    min-width: 20%;
+    max-width: 40%;
+    min-height: 20%;
+    max-height: 30%;
+
+
+
+    align-items: center;
+
+    width: auto;
+    height: auto;
 
     grid-area: CV;
 
@@ -261,16 +267,21 @@ img {
 }
 
 #cv-title{
+    justify-content: center;
     border: none;
-    padding: 3rem;
+    font-size: 1vw;
+    padding: 0;
     color: black;
 }
 
 #footer-note {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
     font-family: "Martian-Mono-Semi-Expanded-Medium";
     font-size: 0.75rem;
 
-    position: relative;
-    left: 45%;
-    top: 95%
+    margin-top: 2rem;
 }

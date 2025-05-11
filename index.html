@@ -5,6 +5,7 @@
 <!-- Entête de la page, contient les informations sur les métadonnées
  La règle d'encodage des caractères et les dimmensions du viewport (l'endroit où s'affiche la 
  page dans le navigateur)-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,45 +15,58 @@
 
 <body>
 
-<!-- Premier conteneur de navigation pour lister mes motivations
+    <!-- Premier conteneur de navigation pour lister mes motivations
  Utilisation d'une balise h2 pour le titre et unordered list pour la liste-->
 
- <header>
-    <img src="./img/photo1.jpg" title="" alt="Photo de Quentin Derimais" id="avatar">
-    <h1 id="title-name">Quentin Derimais</h1>
-</header>
+    <header>
+        <img src="./img/photo1.jpg" title="" alt="Photo de Quentin Derimais" id="avatar">
+        <h1 id="title-name">Quentin Derimais</h1>
+    </header>
 
-<section id="main">
-    <nav class="nav-list" id="nav-motivation">
-        <h2 class="nav-list-title">Mes motivations à intégrer Simplon</h2>
-        <ul id="list-motivation">
-            <li>Faire de ma passion pour l'informatique un métier qui me tient à cœur.</li>
-            <li>Intégrer une formation professionnalisante, offrant une pédagogie active, articulée autour de mises en situation réelles.</li>
-            <li>Me reconvertir dans un métier d'avenir, en constante évolution et nécessitant une formation continue.</li>
-            <li>Mettre à profit mes compétences et connaissances, tout en les développant activement au sein d’une équipe dynamique et d’un projet commun.</li>
-        </ul>
-    </nav>
+    <section id="main">
+        <section class="nav-list" id="nav-motivation">
+            <h2 class="nav-list-title">Mes motivations à intégrer Simplon</h2>
+            <ul id="list-motivation">
+                <li>Passionné par l'informatique depuis mon enfance, j'ai développé un intérêt très fort pour le
+                    développement informatique et souhaite désormais faire de ma passion un métier.</li>
+                <li>Je recherche une formation dans laquelle une place importante est laissée à la pratique, j'apprends
+                    plus efficacement en réalisant des projets concrets plutôt qu'en lisant des cours théoriques. Je
+                    souhaite par ailleurs être insérable sur le marché du travail directement à l'issue de la formation,
+                    ce que la pédagogie de Simplon favorise.</li>
+                <li>L'informatique est un milieu vaste qui évolue très rapidement. Étant particulièrement curieux je
+                    prends beaucoup de plaisir à me former sur de nouvelles compétences ou découvrir de nouvelles
+                    connaissances, ce qui constitue une composante importante du métier de développeur</li>
+                <li>J'affectionne le travail en équipe et la construction de projet, qui est une composante essentielle
+                    du développement informatique.</li>
+            </ul>
+        </section>
 
-<!-- Même principe que le conteneur précédent
+        <!-- Même principe que le conteneur précédent
  Ouverture du lien dans un nouvel onglet 
  Insertion des logo avant le texte du lien -->
 
-    <nav class="nav-list" id="nav-social">
-        <h2 class="nav-list-title">Mes profils en ligne</h2>
-        <ul id="list-social">
-            <li><a href="https://www.linkedin.com/in/quentin-derimais/" target="_blank" class="social-link"><img src="./icons/linkedin-icon.png" alt="logo Linkedin">Linkedin</a></li>
-            <li><a href="https://github.com/Quentindrms" target="_blank" class="social-link"><img src="./icons/github-icon.png" alt="logo Github">Github</a></li>
-            <li><a href="https://www.codewars.com/users/Quentde38" target="_blank" class="social-link"><img src="./icons/code-wars.png" alt="logo Codewars">Codewars</a></li>
-            <li><a href="https://www.codecademy.com/profiles/qdrms" target="_blank" class="social-link"><img src="./icons/code-academy.png" alt="Logo Codeacademy">Codeacademy</a></li>
-        </ul>
-    </nav>
+        <nav class="nav-list" id="nav-social">
+            <h2 class="nav-list-title">Mes profils en ligne</h2>
+            <ul id="list-social">
+                <li><a href="https://www.linkedin.com/in/quentin-derimais/" target="_blank" class="social-link"><img
+                            src="./icons/linkedin-icon.png" alt="logo Linkedin">Linkedin</a></li>
+                <li><a href="https://github.com/Quentindrms" target="_blank" class="social-link"><img
+                            src="./icons/github-icon.png" alt="logo Github">Github</a></li>
+                <li><a href="https://www.codewars.com/users/Quentde38" target="_blank" class="social-link"><img
+                            src="./icons/code-wars.png" alt="logo Codewars">Codewars</a></li>
+                <li><a href="https://www.codecademy.com/profiles/qdrms" target="_blank" class="social-link"><img
+                            src="./icons/code-academy.png" alt="Logo Codeacademy">Codeacademy</a></li>
+            </ul>
+        </nav>
 
-<!-- Conteneur pour lien cliquable menant vers le CV-->
+        <!-- Conteneur pour lien cliquable menant vers le CV-->
 
-    <nav class="nav-list" id="nav-cv">
-        <a href="./CV/index.html" target="_blank" title="Consulter mon cv"><h2 class="nav-list-title" id="cv-title">Consulter mon CV</h2></a>
-    </nav>
-</section>
+        <section class="nav-list" id="nav-cv">
+            <a href="./CV/index.html" target="_blank" title="Consulter mon cv">
+                <h2 class="nav-list-title" id="cv-title">Consulter mon CV</h2>
+            </a>
+        </section>
+    </section>
 
     <footer>
         <p id="footer-note">© QUENTIN DERIMAIS - 2025</p>
