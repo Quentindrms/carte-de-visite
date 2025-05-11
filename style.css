@@ -35,14 +35,17 @@ html {
 
 body {
     margin: 0;
-    background: #7F6AFA;
-    background: linear-gradient(0deg, rgba(127, 106, 250, 1) 0%, rgba(105, 130, 250, 1) 50%, rgba(105, 176, 250, 1) 100%);
+
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-size: 1vw;
 
-    
-    overflow-x: hidden;
+    /* https://grabient.com/HQJgjAnANMEBzWAVgMwppA7DTKAsMEYAbBktqGBSHHFCMsQSskgAxR7CZhxA/HQJgjAnANMEBzWAVgMwppA7DTKAsMEYAbBktqGBSHHFCMsQSskgAxR7CZhxA?style=linearSwatches&steps=13&angle=45 */
+
 }
 
 /** Création d'une flexbox dans le header
@@ -50,7 +53,7 @@ Disposition en ligne
 Aligne les éléments sur l'axe secondaire (horizontal)
 */
 
-header{
+header {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -60,18 +63,18 @@ header{
 
 /** Création d'une section main contenant le coeur de la page 
 Disposition en grille
-Création d'une grille suivant le modèle 4 colonnes / 4 lignes
+Création d'une grille suivant le modèle 4 colonnes avec 1 fraction de l'espace par cellule (1/4 ici)
 */
 
-#main{
+#main {
     display: grid;
     width: fit-content;
 
     grid-template-columns: repeat(4, 1fr);
-    grid-template: 
-    "MOTIV MOTIV  SOCIAL SOCIAL"
-    "MOTIV MOTIV  CV CV"
-    "MOTIV MOTIV  . .";
+    grid-template:
+        "MOTIV MOTIV  SOCIAL SOCIAL"
+        "MOTIV MOTIV  CV CV"
+        "MOTIV MOTIV  . .";
 }
 
 /** Proprités title-name 
@@ -89,7 +92,7 @@ Création d'une grille suivant le modèle 4 colonnes / 4 lignes
     font-size: 4.5rem;
     text-transform: uppercase;
 
-    border-bottom: 5px solid #6982FA;
+    border-bottom: 5px solid #00B4DB;
 }
 
 /** Utilisation de clip-path pour ne pas afficher la partie de l'image en dehors du cercle
@@ -111,7 +114,7 @@ Largeur maximale définit automatiquement
     min-width: 5%;
     width: auto;
     height: auto;
-    border: 3px solid #5E6FFA;
+    border: 3px solid #0083B0;
     border-radius: 5px;
 
     font-family: "Martian-Mono-Semi-Expanded-Medium";
@@ -123,9 +126,9 @@ Largeur maximale définit automatiquement
 
 .nav-list-title {
     margin: 0;
-    padding: 2rem;
+    padding: 1rem;
 
-    border-bottom: 5px solid #5E6FFA;
+    border-bottom: 5px solid #00B4DB;
 
     text-align: center;
     font-size: 2vw;
@@ -138,11 +141,13 @@ Définit une largeur minimale et maximale
 Positionnement du conteneur **/
 
 #nav-motivation {
-    max-width: 70%;
+    max-width: 85%;
     min-width: 20%;
     width: auto;
 
     margin-left: 5%;
+    margin-right: 5%;
+
 
     grid-area: MOTIV;
 }
@@ -150,13 +155,17 @@ Positionnement du conteneur **/
 #list-motivation {
     font-size: 1.15vw;
     text-wrap: wrap;
+
 }
 
 /** Ajout d'un padding pour centrer les éléments dans le conteneur **/
 
 #list-motivation li {
-    padding: 1rem;
-    list-style-type: none;
+    padding-bottom: 0.5vw;
+    hyphens: auto;
+    text-align: justify;
+
+
     list-style-type: square;
 }
 
@@ -191,7 +200,7 @@ Empêche le retour à la ligne **/
 */
 
 #list-social li {
-    border: 2px solid #5C4CB5;
+    border: 2px solid #0083B0;
     border-radius: 10px;
     margin: .45rem;
     padding: .45rem;
@@ -205,11 +214,11 @@ Empêche le retour à la ligne **/
 /** Modifie le fond d'écran au survol **/
 
 #list-social li:hover {
-    background-color: #5E6FFA;
+    background-color: #00B4DB;
 
 }
 
-#list-social a{
+#list-social a {
     text-decoration: none;
     color: black;
 }
@@ -221,7 +230,7 @@ img {
 
     padding-left: 0.75rem;
 
-    width: 15px;
+    width: 1.1vw;
     height: auto;
 }
 
@@ -257,16 +266,16 @@ img {
 ** border-color est modifié pour que la bordure reste visible par l'utilisateur
 */
 
-#nav-cv:hover{
-    background-color: #5E6FFA;
-    border-color: #5C4CB5;
+#nav-cv:hover {
+    background-color: #00B4DB;
+    border-color: #0083B0;
 }
 
-#nav-cv a{
+#nav-cv a {
     text-decoration: none;
 }
 
-#cv-title{
+#cv-title {
     justify-content: center;
     border: none;
     font-size: 1vw;
